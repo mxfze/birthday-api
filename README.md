@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Birthday Bot with [NestJS](https://github.com/nestjs/nest) and Python.
 
 ## Installation
 
@@ -45,29 +45,45 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Requests
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# Get all birthdays [GET]
+> http://localhost:3000/birthdays/
+```
+```bash
+# Get birthday by ID [GET]
+> http://localhost:3000/birthdays/{id}
 ```
 
-## Support
+```bash
+# Add a birthday [POST]
+> http://localhost:3000/birthdays/
+  Body Format:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+  {
+    "name": "name",
+    "date": "[DD/MM]",
+    "email": "email"
+  }
+```
 
-## Stay in touch
+```bash
+# Update a birthday [PUT]
+> http://localhost:3000/birthdays/{id}
+  Body Format:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+  {
+    "name": "name",
+    "date": "[DD/MM]",
+    "email": "email"
+  }
+```
 
-## License
+```bash
+# Delete a birthday [DELETE]
+> http://localhost:3000/birthdays/{id}
+```
 
-Nest is [MIT licensed](LICENSE).
+
+For the python script, you will need to create a new google acccount with two step verification. Then you will need to create an app password for that account and add it to the pass.txt file
