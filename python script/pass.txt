@@ -1,0 +1,4 @@
+Go to https://myaccount.google.com/apppasswords
+and generate an app password for the email that you are using.
+then replace the contents of this file with the app password
+(two step verification is needed to create an app password
